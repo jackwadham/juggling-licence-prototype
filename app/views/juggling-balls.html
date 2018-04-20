@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/start-page">Back</a>
+
+
+      <form class="form" action="/juggling-balls-answer" method="post">
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-xlarge">How many Balls can you juggle?</h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="juggling-balls" value="Three or more" {{ checked("juggling-balls", "Three or more")}}>
+              <label for="radio-1">Three or more</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="juggling-balls" value="One or two" {{ checked("juggling-balls", "One or two")}}>
+              <label for="radio-2">One or two</label>
+            </div>
+            <p class="form-block">or</p>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="juggling-balls" value="None - I can not juggle" {{ checked("juggling-balls", "None - I can not juggle")}}>
+              <label for="radio-3">None - I can not juggle</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

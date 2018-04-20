@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/juggling-balls">Back</a>
+
+
+      <form class="form" action="/clown-school-answer" method="post">
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-xlarge">Have you graduated from a government-certified clown school?</h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="clown-school" value="Yes" {{ checked("clown-school", "Yes")}}>
+              <label for="radio-1">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="clown-school" value="No" {{ checked("clown-school", "No")}}>
+              <label for="radio-2">No</label>
+
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

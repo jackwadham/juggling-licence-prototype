@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/clown-school">Back</a>
+
+      <h1 class="heading-large">Describe your most impressive juggling trick
+      </h1>
+
+      <form class="form" action="/check-your-answers-page" method="post">
+
+        <div class="form-group">
+
+          <textarea class="form-control form-control-3-4" name="juggling-trick" id="textarea" rows="5">{{ data["juggling-trick"]}}</textarea>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
